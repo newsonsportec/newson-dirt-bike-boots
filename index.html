@@ -27,6 +27,7 @@
       font-family: Arial, Helvetica, sans-serif;
       background: #050505;
       color: #ffffff;
+      overflow-x: auto;
     }
 
     .page-wrapper {
@@ -36,11 +37,20 @@
       display: flex;
       justify-content: center;
       align-items: flex-start;
+      padding: 0;
+    }
+
+    .image-container {
+      width: 200%;
+      min-width: 200%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
     }
 
     .website-image {
-      width: 100%;
-      max-width: 1400px;
+      width: 200%;
+      max-width: none;
       height: auto;
       display: block;
     }
@@ -59,9 +69,9 @@
       text-decoration: none;
       background: #ff6a00;
       color: #ffffff;
-      padding: 12px 18px;
+      padding: 14px 22px;
       border-radius: 6px;
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 700;
       letter-spacing: 0.5px;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
@@ -74,8 +84,13 @@
     }
 
     @media (max-width: 768px) {
+      .image-container {
+        width: 200%;
+        min-width: 200%;
+      }
+
       .website-image {
-        width: 100%;
+        width: 200%;
         max-width: none;
       }
 
@@ -85,8 +100,8 @@
       }
 
       .floating-buttons a {
-        padding: 10px 14px;
-        font-size: 12px;
+        padding: 12px 16px;
+        font-size: 13px;
       }
     }
   </style>
@@ -94,11 +109,13 @@
 
 <body>
   <main class="page-wrapper">
-    <img
-      src="boots-homepage.png"
-      alt="Newson Sportec dirt bike boots website design showing Ride Protected, Ride Styled, color choices, rider benefits, and product features."
-      class="website-image"
-    />
+    <div class="image-container">
+      <img
+        src="boots-homepage.png"
+        alt="Newson Sportec dirt bike boots website design showing Ride Protected, Ride Styled, color choices, rider benefits, and product features."
+        class="website-image"
+      />
+    </div>
   </main>
 
   <div class="floating-buttons">
